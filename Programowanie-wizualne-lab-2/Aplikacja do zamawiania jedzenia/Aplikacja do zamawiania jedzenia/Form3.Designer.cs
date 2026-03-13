@@ -41,19 +41,20 @@
             checkBox1.AutoSize = true;
             checkBox1.Location = new Point(52, 80);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(101, 24);
+            checkBox1.Size = new Size(209, 24);
             checkBox1.TabIndex = 0;
-            checkBox1.Text = "checkBox1";
+            checkBox1.Text = "Ekspresowa dostawa (15zł)";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // checkBox2
             // 
             checkBox2.AutoSize = true;
             checkBox2.Location = new Point(52, 110);
             checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(101, 24);
+            checkBox2.Size = new Size(204, 24);
             checkBox2.TabIndex = 1;
-            checkBox2.Text = "checkBox2";
+            checkBox2.Text = "Sztućce jednorazowe (2zł)";
             checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox3
@@ -61,9 +62,9 @@
             checkBox3.AutoSize = true;
             checkBox3.Location = new Point(52, 140);
             checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(101, 24);
+            checkBox3.Size = new Size(231, 24);
             checkBox3.TabIndex = 2;
-            checkBox3.Text = "checkBox3";
+            checkBox3.Text = "Opakowanie ekologiczne (3zł)";
             checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox4
@@ -71,9 +72,9 @@
             checkBox4.AutoSize = true;
             checkBox4.Location = new Point(52, 170);
             checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(101, 24);
+            checkBox4.Size = new Size(199, 24);
             checkBox4.TabIndex = 3;
-            checkBox4.Text = "checkBox4";
+            checkBox4.Text = "Powiadomienie SMS (0zł)";
             checkBox4.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -99,7 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(230, 302);
+            ClientSize = new Size(315, 317);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(checkBox4);

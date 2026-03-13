@@ -36,6 +36,7 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
+            listBox1.SelectionMode = SelectionMode.MultiSimple;
             listBox1.Location = new Point(29, 25);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(425, 204);
@@ -60,6 +61,7 @@
             button2.TabIndex = 2;
             button2.Text = "Anuluj";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form2
             // 

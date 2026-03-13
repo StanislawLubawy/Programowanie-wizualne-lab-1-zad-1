@@ -33,6 +33,9 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // listView1
@@ -42,11 +45,12 @@
             listView1.Size = new Size(306, 331);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(567, 90);
+            label1.Location = new Point(566, 72);
             label1.Name = "label1";
             label1.Size = new Size(49, 20);
             label1.TabIndex = 1;
@@ -80,11 +84,41 @@
             button3.Text = "Zapłać";
             button3.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(565, 92);
+            label2.Name = "label2";
+            label2.Size = new Size(145, 20);
+            label2.TabIndex = 5;
+            label2.Text = "Cena opcji dostawy: ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(566, 112);
+            label3.Name = "label3";
+            label3.Size = new Size(94, 20);
+            label3.TabIndex = 6;
+            label3.Text = "Cena razem: ";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(480, 319);
+            label4.Name = "label4";
+            label4.Size = new Size(197, 20);
+            label4.TabIndex = 7;
+            label4.Text = "Wybrana opcja zapłaty: Brak";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
+            Controls.Add(label4);
+            Controls.Add(label2);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -103,5 +137,8 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }
