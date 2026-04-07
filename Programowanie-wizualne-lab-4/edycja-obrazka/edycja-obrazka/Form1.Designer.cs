@@ -31,6 +31,10 @@
             pictureBoxMain = new PictureBox();
             btnLoad = new Button();
             openFileDialog1 = new OpenFileDialog();
+            rdo90 = new RadioButton();
+            rdo180 = new RadioButton();
+            rdo270 = new RadioButton();
+            btnRotate = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMain).BeginInit();
             SuspendLayout();
             // 
@@ -53,6 +57,48 @@
             btnLoad.UseVisualStyleBackColor = true;
             btnLoad.Click += btnLoad_Click;
             // 
+            // rdo90
+            // 
+            rdo90.AutoSize = true;
+            rdo90.Location = new Point(12, 20);
+            rdo90.Name = "rdo90";
+            rdo90.Size = new Size(41, 24);
+            rdo90.TabIndex = 2;
+            rdo90.Text = "90°";
+            rdo90.UseVisualStyleBackColor = true;
+            // 
+            // rdo180
+            // 
+            rdo180.AutoSize = true;
+            rdo180.Location = new Point(12, 50);
+            rdo180.Name = "rdo180";
+            rdo180.Size = new Size(47, 24);
+            rdo180.TabIndex = 3;
+            rdo180.Text = "180°";
+            rdo180.UseVisualStyleBackColor = true;
+            // 
+            // rdo270
+            // 
+            rdo270.AutoSize = true;
+            rdo270.Location = new Point(12, 80);
+            rdo270.Name = "rdo270";
+            rdo270.Size = new Size(41, 24);
+            rdo270.TabIndex = 4;
+            rdo270.Text = "270°";
+            rdo270.UseVisualStyleBackColor = true;
+            // 
+            // btnRotate
+            // 
+            btnRotate.Location = new Point(12, 120);
+            btnRotate.Name = "btnRotate";
+            btnRotate.Size = new Size(110, 30);
+            btnRotate.TabIndex = 5;
+            btnRotate.Text = "Rotate";
+            btnRotate.UseVisualStyleBackColor = true;
+            btnRotate.BackColor = Color.LightCoral;
+            btnRotate.ForeColor = Color.White;
+            btnRotate.Click += btnRotate_Click;
+            // 
             // openFileDialog1
             // 
             openFileDialog1.Filter = "Bitmap files (*.bmp)|*.bmp|All files (*.*)|*.*";
@@ -62,6 +108,10 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnRotate);
+            Controls.Add(rdo270);
+            Controls.Add(rdo180);
+            Controls.Add(rdo90);
             Controls.Add(btnLoad);
             Controls.Add(pictureBoxMain);
             Name = "Form1";
@@ -73,6 +123,10 @@
         private System.Windows.Forms.PictureBox pictureBoxMain;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.RadioButton rdo90;
+        private System.Windows.Forms.RadioButton rdo180;
+        private System.Windows.Forms.RadioButton rdo270;
+        private System.Windows.Forms.Button btnRotate;
 
         #endregion
     }

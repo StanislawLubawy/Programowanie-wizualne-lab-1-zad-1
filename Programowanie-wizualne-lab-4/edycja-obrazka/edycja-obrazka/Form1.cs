@@ -23,5 +23,24 @@ namespace edycja_obrazka
                 }
             }
         }
+
+        private void btnRotate_Click(object? sender, EventArgs e)
+        {
+            if (pictureBoxMain.Image == null)
+            {
+                MessageBox.Show("No image loaded", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            RotateFlipType flipType = RotateFlipType.RotateNoneFlipNone;
+            if (rdo90.Checked) flipType = RotateFlipType.Rotate90FlipNone;
+            else if (rdo180.Checked) flipType = RotateFlipType.Rotate180FlipNone;
+            else if (rdo270.Checked) flipType = RotateFlipType.Rotate270FlipNone;
+
+            var bmp = new Bitmap(pictureBoxMain.Image);
+            bmp.RotateFlip(flipType);
+            pictureBoxMain.Image?.Dispose();
+            pictureBoxMain.Image = bmp;
+        }
     }
 }
