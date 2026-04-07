@@ -35,6 +35,8 @@
             rdo180 = new RadioButton();
             rdo270 = new RadioButton();
             btnRotate = new Button();
+            btnInvert = new Button();
+            btnUpsideDown = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMain).BeginInit();
             SuspendLayout();
             // 
@@ -99,6 +101,30 @@
             btnRotate.ForeColor = Color.White;
             btnRotate.Click += btnRotate_Click;
             // 
+            // btnInvert
+            // 
+            btnInvert.Location = new Point(12, 160);
+            btnInvert.Name = "btnInvert";
+            btnInvert.Size = new Size(110, 30);
+            btnInvert.TabIndex = 6;
+            btnInvert.Text = "Invert Colors";
+            btnInvert.UseVisualStyleBackColor = true;
+            btnInvert.BackColor = Color.LightBlue;
+            btnInvert.ForeColor = Color.Black;
+            btnInvert.Click += btnInvert_Click;
+            // 
+            // btnUpsideDown
+            // 
+            btnUpsideDown.Location = new Point(12, 200);
+            btnUpsideDown.Name = "btnUpsideDown";
+            btnUpsideDown.Size = new Size(110, 30);
+            btnUpsideDown.TabIndex = 7;
+            btnUpsideDown.Text = "Upside Down";
+            btnUpsideDown.UseVisualStyleBackColor = true;
+            btnUpsideDown.BackColor = Color.LightBlue;
+            btnUpsideDown.ForeColor = Color.Black;
+            btnUpsideDown.Click += btnUpsideDown_Click;
+            // 
             // openFileDialog1
             // 
             openFileDialog1.Filter = "Bitmap files (*.bmp)|*.bmp|All files (*.*)|*.*";
@@ -108,6 +134,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnUpsideDown);
+            Controls.Add(btnInvert);
             Controls.Add(btnRotate);
             Controls.Add(rdo270);
             Controls.Add(rdo180);
@@ -127,6 +155,8 @@
         private System.Windows.Forms.RadioButton rdo180;
         private System.Windows.Forms.RadioButton rdo270;
         private System.Windows.Forms.Button btnRotate;
+        private System.Windows.Forms.Button btnInvert;
+        private System.Windows.Forms.Button btnUpsideDown;
 
         #endregion
     }

@@ -42,5 +42,46 @@ namespace edycja_obrazka
             pictureBoxMain.Image?.Dispose();
             pictureBoxMain.Image = bmp;
         }
+
+        private void btnInvert_Click(object? sender, EventArgs e)
+        {
+            if (pictureBoxMain.Image == null)
+            {
+                MessageBox.Show("No image loaded", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var src = new Bitmap(pictureBoxMain.Image);
+            var bmp = new Bitmap(src.Width, src.Height);
+            for (int y = 0; y < src.Height; y++)
+            {
+                for (int x = 0; x < src.Width; x++)
+                {
+                    var c = src.GetPixel(x, y);
+                    var nc = Color.FromArgb(c.A, 255 - c.R, 255 - c.G, 255 - c.B);
+                    bmp.SetPixel(x, y, nc);
+                }
+            }
+
+            pictureBoxMain.Image?.Dispose();
+            src.Dispose();
+            pictureBoxMain.Image = bmp;
+        }
+
+        private void btnUpsideDown_Click(object? sender, EventArgs e)
+        {
+            if (pictureBoxMain.Image == null)
+            {
+                MessageBox.Show("No image loaded", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var src = new Bitmap(pictureBoxMain.Image);
+            src.RotateFlip(RotateFlipType.RotateNoneFlipY);
+            var bmp = new Bitmap(src);
+            pictureBoxMain.Image?.Dispose();
+            src.Dispose();
+            pictureBoxMain.Image = bmp;
+        }
     }
 }
