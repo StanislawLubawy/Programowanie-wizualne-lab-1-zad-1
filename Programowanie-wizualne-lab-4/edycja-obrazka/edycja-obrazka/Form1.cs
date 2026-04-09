@@ -24,37 +24,6 @@ namespace edycja_obrazka
             }
         }
 
-        private void btnOnlyGreen_Click(object? sender, EventArgs e)
-        {
-            if (pictureBoxMain.Image == null)
-            {
-                MessageBox.Show("No image loaded", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            var src = new Bitmap(pictureBoxMain.Image);
-            var bmp = new Bitmap(src.Width, src.Height);
-            for (int y = 0; y < src.Height; y++)
-            {
-                for (int x = 0; x < src.Width; x++)
-                {
-                    var c = src.GetPixel(x, y);
-
-                    if (c.G > c.R + 30 && c.G > c.B + 30)
-                    {
-                        bmp.SetPixel(x, y, c);
-                    }
-                    else
-                    {
-                        bmp.SetPixel(x, y, Color.Black);
-                    }
-                }
-            }
-
-            pictureBoxMain.Image?.Dispose();
-            src.Dispose();
-            pictureBoxMain.Image = bmp;
-        }
 
         private void btnRotate_Click(object? sender, EventArgs e)
         {
@@ -100,6 +69,38 @@ namespace edycja_obrazka
             pictureBoxMain.Image = bmp;
         }
 
+        private void btnOnlyGreen_Click(object? sender, EventArgs e)
+        {
+            if (pictureBoxMain.Image == null)
+            {
+                MessageBox.Show("No image loaded", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var src = new Bitmap(pictureBoxMain.Image);
+            var bmp = new Bitmap(src.Width, src.Height);
+            for (int y = 0; y < src.Height; y++)
+            {
+                for (int x = 0; x < src.Width; x++)
+                {
+                    var c = src.GetPixel(x, y);
+                    if (c.G > c.R + 30 && c.G > c.B + 30)
+                    {
+                        bmp.SetPixel(x, y, c);
+                    }
+                    else
+                    {
+                        bmp.SetPixel(x, y, Color.Black);
+                    }
+                }
+            }
+
+            pictureBoxMain.Image?.Dispose();
+            src.Dispose();
+            pictureBoxMain.Image = bmp;
+        }
+
+
         private void btnUpsideDown_Click(object? sender, EventArgs e)
         {
             if (pictureBoxMain.Image == null)
@@ -115,5 +116,6 @@ namespace edycja_obrazka
             src.Dispose();
             pictureBoxMain.Image = bmp;
         }
+
     }
 }

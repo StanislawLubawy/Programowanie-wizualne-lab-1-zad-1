@@ -53,6 +53,31 @@ namespace pracownicy
             buttonDelete.Click += ButtonDelete_Click;
             buttonSave.Click += ButtonSave_Click;
             buttonLoad.Click += ButtonLoad_Click;
+            buttonExport.Click += ButtonExport_Click;
+        }
+
+        private void ButtonExport_Click(object? sender, EventArgs e)
+        {
+            var list = new List<Osoba>();
+            foreach (var emp in employees)
+            {
+                list.Add(new Osoba
+                {
+                    Id = emp.Id,
+                    FirstName = emp.FirstName,
+                    LastName = emp.LastName,
+                    Age = emp.Age,
+                    Position = emp.Position
+                });
+            }
+
+            using var sfd = new SaveFileDialog { Filter = "XML files (*.xml)|*.xml", FileName = "pracownicy.xml" };
+            if (sfd.ShowDialog(this) == DialogResult.OK)
+            {
+                var ser = new System.Xml.Serialization.XmlSerializer(typeof(List<Osoba>));
+                using var fs = File.Create(sfd.FileName);
+                ser.Serialize(fs, list);
+            }
         }
 
         private void ButtonAdd_Click(object? sender, EventArgs e)

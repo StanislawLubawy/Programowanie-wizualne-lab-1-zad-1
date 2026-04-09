@@ -8,6 +8,7 @@ namespace pracownicy
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.Button buttonExport;
 
         protected override void Dispose(bool disposing)
         {
@@ -25,6 +26,7 @@ namespace pracownicy
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonLoad = new System.Windows.Forms.Button();
+            this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
 
@@ -71,7 +73,16 @@ namespace pracownicy
             this.buttonLoad.Text = "Odczyt z .csv";
             this.buttonLoad.UseVisualStyleBackColor = true;
 
+            this.buttonExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonExport.Location = new System.Drawing.Point(264, 318);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(120, 30);
+            this.buttonExport.TabIndex = 5;
+            this.buttonExport.Text = "Eksport do XML";
+            this.buttonExport.UseVisualStyleBackColor = true;
+
             this.ClientSize = new System.Drawing.Size(680, 360);
+            this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonDelete);

@@ -37,6 +37,7 @@
             btnRotate = new Button();
             btnInvert = new Button();
             btnUpsideDown = new Button();
+            btnOnlyGreen = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMain).BeginInit();
             SuspendLayout();
             // 
@@ -125,6 +126,18 @@
             btnUpsideDown.ForeColor = Color.Black;
             btnUpsideDown.Click += btnUpsideDown_Click;
             // 
+            // btnOnlyGreen
+            // 
+            btnOnlyGreen.Location = new Point(12, 240);
+            btnOnlyGreen.Name = "btnOnlyGreen";
+            btnOnlyGreen.Size = new Size(110, 30);
+            btnOnlyGreen.TabIndex = 8;
+            btnOnlyGreen.Text = "OnlyGreen";
+            btnOnlyGreen.UseVisualStyleBackColor = true;
+            btnOnlyGreen.BackColor = Color.LightGreen;
+            btnOnlyGreen.ForeColor = Color.Black;
+            btnOnlyGreen.Click += btnOnlyGreen_Click;
+            // 
             // openFileDialog1
             // 
             openFileDialog1.Filter = "Bitmap files (*.bmp)|*.bmp|All files (*.*)|*.*";
@@ -134,6 +147,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnOnlyGreen);
             Controls.Add(btnUpsideDown);
             Controls.Add(btnInvert);
             Controls.Add(btnRotate);
@@ -157,6 +171,7 @@
         private System.Windows.Forms.Button btnRotate;
         private System.Windows.Forms.Button btnInvert;
         private System.Windows.Forms.Button btnUpsideDown;
+        private System.Windows.Forms.Button btnOnlyGreen;
 
         #endregion
     }
