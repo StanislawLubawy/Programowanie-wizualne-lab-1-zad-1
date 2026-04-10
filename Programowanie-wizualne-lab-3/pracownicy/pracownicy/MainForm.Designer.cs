@@ -8,6 +8,7 @@ namespace pracownicy
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.Button buttonExportJson;
         private System.Windows.Forms.Button buttonExport;
 
         protected override void Dispose(bool disposing)
@@ -27,6 +28,7 @@ namespace pracownicy
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonExport = new System.Windows.Forms.Button();
+            this.buttonExportJson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
 
@@ -81,8 +83,17 @@ namespace pracownicy
             this.buttonExport.Text = "Eksport do XML";
             this.buttonExport.UseVisualStyleBackColor = true;
 
+            this.buttonExportJson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonExportJson.Location = new System.Drawing.Point(264, 318);
+            this.buttonExportJson.Name = "buttonExportJson";
+            this.buttonExportJson.Size = new System.Drawing.Size(120, 30);
+            this.buttonExportJson.TabIndex = 5;
+            this.buttonExportJson.Text = "Zapis do JSON";
+            this.buttonExportJson.UseVisualStyleBackColor = true;
+
             this.ClientSize = new System.Drawing.Size(680, 360);
             this.Controls.Add(this.buttonExport);
+            this.Controls.Add(this.buttonExportJson);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonDelete);
